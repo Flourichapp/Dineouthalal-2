@@ -1,0 +1,107 @@
+<body>
+  <div class="email_wrapper">
+    <div
+      style="
+        max-width: 600px !important;
+        margin: 50px auto !important;
+        padding: 0px;
+        border: 1px solid #797979;
+      "
+    >
+      <div style="width: 80%; margin: auto">
+        <div style="text-align: center" class="logo">
+          <div style="display: flex; flex-wrap: wrap">
+            <div style="width: 100%; padding: 15px">
+              <img
+                src="https://hysitzro.sirv.com/Dineoutblack%20logo.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="text-align: center; font-size: 18px; padding-bottom: 50px">
+            Your booking at <%=options.userinfo.title %><br />
+            is now
+            <span style="color: red; font-size: 18px"
+              ><b><%=options.message %></b></span
+            >
+          </p>
+          <h3 class="">
+            <%=options.userinfo.first_name %>&nbsp;<%=options.userinfo.last_name
+            %><br />
+            <%=options.userinfo.person_no %> people on <%=options.Bookday %>
+            <%=options.bookdate %>  <%=options.Bookmonth %> <%=options.bookingTime %> to
+            <%=options.bookingTimeto %>
+          </h3>
+          <p style="margin-top: 4px">
+            Booking reference:<%=options.userinfo.id %>
+          </p>
+          <p>
+            Information about &nbsp;<%=options.userinfo.title %> about your booking:
+          </p>
+          <p style="margin-top: 50px">
+            This text here can be edited and written by the restaurant
+            <br />themselves about their terms and conditions similar to the<br />
+            example I had given. They can edit and change it anytime<br />
+            when confirming the booking.
+          </p>
+          <p style="margin-bottom: 40px">
+            Your sincerely<br />
+            <%=options.userinfo.title %>
+          </p>
+        </div>
+      </div>
+
+      <div class="email-footer">
+        <div class="email-footer-icons text-center">
+          <div style="display: flex">
+            <div
+              style="
+                width: 50%;
+                border: 1px solid #707070;
+                height: 50px;
+                padding: 10px 0px;
+                padding-left: 10%;
+              "
+            >
+              <p style="margin-top: 1px; margin-bottom: 0px">
+                <img
+                  style="position: relative !important; top: 5px !important"
+                  src="https://hysitzro.sirv.com/Icon%20material-location-on.png"
+                  alt=""
+                  width="13px"
+                />
+                <label>Address of the restaurant </label>
+              </p>
+              <a
+                href=<%=options.mapsurl %>
+                style="color: red"
+              >
+                <label style="color: red; margin-left: 18px">Map view</label>
+              </a>
+            </div>
+            <div
+              style="
+                width: 50%;
+                border: 1px solid #707070;
+                height: 50px;
+                padding: 10px 0px;
+                padding-left: 10%;
+              "
+            >
+              <img
+                style="margin-top: 15px"
+                src="https://hysitzro.sirv.com/Icon%20feather-calendar.png"
+                alt=""
+                width="13px"
+              />
+              &nbsp;<a href=<%=options.bookingUrl %>>Add to calendar</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
